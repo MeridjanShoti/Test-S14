@@ -19,7 +19,7 @@ public abstract class Media {
     public void setTitle(String title) {
         this.title = title;
     }
-
+    public abstract  void execute ();
 
     public Media(String title, int durata) {
         this.title = title;

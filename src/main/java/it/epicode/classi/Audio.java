@@ -33,6 +33,11 @@ public class Audio extends Media implements Riproducibile{
         volume++;
     }
 
+    @Override
+    public void execute() {
+        play();
+    }
+
     public Audio (String titolo, int durata) {
         super(titolo, durata);
         this.durata = durata;
