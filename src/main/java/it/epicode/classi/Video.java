@@ -1,8 +1,6 @@
 package it.epicode.classi;
 
-public class Video extends Media implements Riproducibile, Visivo {
-    static int volume = 5;
-    static int luminosita = 5;
+public class Video extends Media implements Riproducibile {
 
     @Override
     public void execute() {
@@ -29,23 +27,5 @@ public class Video extends Media implements Riproducibile, Visivo {
         }
     }
 
-    @Override
-    public void abbassaVolume() {
-        volume--;
-    }
 
-    @Override
-    public void alzaVolume() {
-        volume++;
-    }
-
-    @Override
-    public void aumentaLuminosita() {
-        luminosita++;
-    }
-
-    @Override
-    public void abbassaLuminosita() {
-        luminosita--;
-    }
 }

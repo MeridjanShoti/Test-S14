@@ -2,7 +2,6 @@ package it.epicode.classi;
 
 public class Audio extends Media implements Riproducibile{
 
-    static int volume = 5;
 
     public static int getVolume() {
         return volume;
@@ -23,15 +22,7 @@ public class Audio extends Media implements Riproducibile{
         }
     }
 
-    @Override
-    public void abbassaVolume() {
-    volume--;
-    }
 
-    @Override
-    public void alzaVolume() {
-        volume++;
-    }
 
     @Override
     public void execute() {

@@ -54,12 +54,14 @@ public class Main {
 
         }
         boolean continua2 = true;
-        while (continua2){
+
+        boolean continua3 = true;
+        while (continua3){
             System.out.println("seleziona un media da riprodurre");
-            System.out.println("1-5 per media 0 per uscire");
+            System.out.println("1-5 seleziona il media da riprodurre \n6 abbassa il volume \n7 alza il volume  \n8 abbassa la luminosità \n9 alza la luminosità \n0 esci");
             switch (scanner.nextInt()){
                 case 0:
-                    continua2 = false;
+                    continua3 = false;
                     System.out.println("arrivederci");
                     break;
                 case 1:
@@ -77,8 +79,20 @@ public class Main {
                 case 5:
                     media[4].execute();
                     break;
+                case 6:
+                    Media.abbassaVolume();
+                    break;
+                case 7:
+                    Media.alzaVolume();
+                    break;
+                case 8:
+                    Media.abbassaLuminosita();
+                    break;
+                case 9:
+                    Media.aumentaLuminosita();
+                    break;
                 default:
-                    System.out.println("scrivi solo 1-5 o 0 per uscire");
+                    System.out.println("scrivi solo numeri da 0 a 9");
             }
         }
     }
