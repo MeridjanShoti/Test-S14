@@ -55,13 +55,13 @@ public class Main {
         }
         boolean continua2 = true;
 
-        boolean continua3 = true;
-        while (continua3){
+
+        while (continua2){
             System.out.println("seleziona un media da riprodurre");
             System.out.println("1-5 seleziona il media da riprodurre \n6 abbassa il volume \n7 alza il volume  \n8 abbassa la luminosità \n9 alza la luminosità \n0 esci");
             switch (scanner.nextInt()){
                 case 0:
-                    continua3 = false;
+                    continua2 = false;
                     System.out.println("arrivederci");
                     break;
                 case 1:
