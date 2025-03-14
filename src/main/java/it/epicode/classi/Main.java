@@ -26,23 +26,23 @@ public class Main {
                 System.out.println("inserisci il titolo del media");
                 String titolo = scanner.nextLine();
                 System.out.println("seleziona tipo del file");
-                System.out.println("audio, video, immagine");
+                System.out.println("a = audio,v = video, i = immagine");
                 String tipo = scanner.nextLine();
                 int durata = 0;
-                if (tipo.equals("audio") || tipo.equals("video")) {
+                if (tipo.equals("a") || tipo.equals("v")) {
                     System.out.println("inserisci la durata");
                     durata = scanner.nextInt();
                     scanner.nextLine();
                 }
                 switch (tipo) {
-                    case "audio":
+                    case "a":
                         media[i] = new Audio(titolo, durata);
                         break;
-                    case "video":
+                    case "v":
                         media[i] = new Video(titolo, durata);
 
                         break;
-                    case "immagine":
+                    case "i":
                         media[i] = new Immagine(titolo);
                         break;
                     default:
