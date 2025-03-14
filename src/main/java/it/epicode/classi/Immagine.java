@@ -6,7 +6,11 @@ public class Immagine extends Media implements Visivo {
         super(title, 0);
     }
     public void show() {
-
+        String puntiLuminosita = "";
+        for(int i = 0; i < luminosita; i++) {
+            puntiLuminosita += "*";
+        }
+        System.out.println(title + " " + puntiLuminosita);
     }
     @Override
     public void execute() {
