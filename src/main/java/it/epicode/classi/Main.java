@@ -23,6 +23,7 @@ public class Main {
         boolean continua = false;
         for (int i = 0; i < 5; i++) {
             do {
+                continua = false;
                 System.out.println("inserisci il titolo del media");
                 String titolo = scanner.nextLine();
                 System.out.println("seleziona tipo del file");
@@ -30,9 +31,12 @@ public class Main {
                 String tipo = scanner.nextLine();
                 int durata = 0;
                 if (tipo.equals("a") || tipo.equals("v")) {
-                    System.out.println("inserisci la durata");
-                    durata = scanner.nextInt();
-                    scanner.nextLine();
+                    boolean reinserisciDurata = false;
+                    do {
+                        System.out.println("inserisci la durata");
+                        durata = scanner.nextInt();
+                        scanner.nextLine();
+                    } while (reinserisciDurata);
                 }
                 switch (tipo) {
                     case "a":
